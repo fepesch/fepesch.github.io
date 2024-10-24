@@ -26,7 +26,7 @@
         }
 
         .container img {
-            max-width: 240px; /* 20% bigger than the previous 200px */
+            max-width: 300px; /* 20% bigger than the previous 200px */
             margin-bottom: 20px;
         }
 
@@ -35,6 +35,24 @@
             color: #333;
             margin: 0 10px; /* Add a little margin to ensure text is not touching edges on mobile */
         }
+
+        .container .linkedin-section {
+            margin-top: 50px;
+        }
+
+        .container a.linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #0077b5; /* LinkedIn's brand color */
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .container a.linkedin-btn img {
+            width: 45px; /* Adjust icon size */
+            margin-right: 10px; /* Add some space between the icon and text */
+        }
     </style>
 </head>
 <body>
@@ -42,6 +60,13 @@
     <div class="container">
         <img src="src/logo-tagline-left-Black.svg" alt="EASE Logo">
         <p>Under Construction! The website of the amazing startup EASE will be here soon...</p>
+
+        <div class="linkedin-section">
+            <p>As long as you are waiting... Check out our Linked-In!</p>
+            <a class="linkedin-btn" href="https://www.linkedin.com/company/ease-exoskeletons" target="_blank">
+                <img src="src/LinkedIn_icon.png" alt="LinkedIn Icon">
+            </a>
+        </div>
     </div>
 
 </body>
