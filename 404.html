@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tschoks Performance - Leistungsoptimierung durch Gesundheitsförderung auf höchstem Niveau</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!--favicons-->
+    <link rel="icon" href="img/tschoks_logo.svg">
+    <link rel=”mask-icon” href=img/tschoks_logo.svg” color="#000000"> <!--For Safari, it’s a bit different. You need to add a mask-icon. It’s also an SVG, but it has to be made of a single colour and placed on a transparent background. The browser adds the colour of the attribute.-->
+    <link rel="apple-touch-icon" href="img/tschoks_logo_apple_touch_icon.png"> <!--The icon for iOS devices as well as favourites from browsers new tab page and more. You only need the 180 x 180 size, and the sizes attribute is superfluous.-->
+    <!--The manifest.json provides information about your web app or website. These lines are mandatory to pass Lighthouse’s test. The icon linked is used by Android and Chrome. The largest size 512 x 512 is the only one needed.-->
+    <link rel="manifest" href="manifest.json">
+    
+</head>
+<body>
+    <nav id="navbar" class="scrolled">
+        <div id="first-nav-row">
+            <a id="logo" href="index.html"><img src="img/tschoks_logo.svg" alt="tschoks logo"><span>Tschoks Performance</span></a>
+            <a href="javascript:void(0);" id="menu-toggle" class="icon" onclick="menuToggle()"></a>
+        </div>
+        <div id="nav-elements">
+            <a class="nav-link" onclick="menuToggle()" href="index.html#offers-section">Unsere Angebote</a>
+            <a class="nav-link" onclick="menuToggle()" href="index.html#about-section">Über uns</a>
+            <a class="nav-link" onclick="menuToggle()" href="#contact-section">Kontakt</a>
+        </div>
+    </nav>
+    
+    <div class="half-width only-section">
+
+        <h1 style="font-size: 10rem; margin-bottom:2rem">404</h1>
+        <p style="margin-bottom:20rem;"> Whoops, diese Seite existiert leider nicht</p>
+        <a class="big-central-btn">Zurück zur Website</a>
+
+    </div>
+    
+    <footer class="full-width">
+        <div>
+            <a id="logo" href="/"><img src="img/tschoks_logo.svg" alt="tschoks logo"><span>Tschoks Performance</span></a>
+            <p>&#169; 2024 Tschoks Performance</p>
+        </div>
+        
+        <div>
+            follow us on social media
+            <div id="social-links">
+                <a href="https://api.whatsapp.com/send/?phone=491745647732&text&type=phone_number&app_absent=0"><img src="img/whatsapp.svg" alt="whatsapp"></a>
+                <a href="https://www.instagram.com/tschoksperformance/"><img src="img/instagram.svg" alt="instagram"></a>
+                <a href="https://www.tiktok.com/@tschoksperformance"><img src="img/tiktok.svg" alt="tiktok"></a>
+            </div>
+        </div>
+        
+        <div id="footer-links">
+            <a href="imprint.html">Impressum</a>
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

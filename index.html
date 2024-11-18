@@ -1,73 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASE - Under Construction</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #EFD619; /* Set the yellow background color */
-        }
-
-        .container {
-            text-align: center;
-            padding: 0 20px; /* Add padding to container to create margin on the left and right */
-        }
-
-        .container img {
-            max-width: 300px; /* 20% bigger than the previous 200px */
-            margin-bottom: 20px;
-        }
-
-        .container p {
-            font-size: 1.5rem;
-            color: #333;
-            margin: 0 10px; /* Add a little margin to ensure text is not touching edges on mobile */
-        }
-
-        .container .linkedin-section {
-            margin-top: 50px;
-        }
-
-        .container a.linkedin-btn {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: #0077b5; /* LinkedIn's brand color */
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-
-        .container a.linkedin-btn img {
-            width: 45px; /* Adjust icon size */
-            margin-right: 10px; /* Add some space between the icon and text */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+    <title>Ease Exoskelette - weil Flexibilität unersetzlich ist</title>
+    
+    <!--carousel-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <!--animate on scroll-->
+    <!--readme via https://github.com/michalsnik/aos/tree/v2-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!--favicon-->
+    <link rel="icon" href="img/favicon.svg">
 </head>
 <body>
-
-    <div class="container">
-        <img src="src/logo-tagline-left-Black.svg" alt="EASE Logo">
-        <p>Under Construction! The website of the amazing startup EASE will be here soon...</p>
-
-        <div class="linkedin-section">
-            <p>As long as you are waiting... Check out our LinkedIn!</p>
-            <a class="linkedin-btn" href="https://www.linkedin.com/company/ease-exoskeletons" target="_blank">
-                <img src="src/LinkedIn_icon.png" alt="LinkedIn Icon">
-            </a>
+    <nav id="navbar">
+        <div id="first-nav-row">
+            <a href="index.html"><img id="ease-logo" src="./img/ease-logo-green.svg" alt="ease logo"></a>
+            <a href="javascript:void(0);" id="menu-toggle" class="icon" onclick="menuToggle()"></a>
+        </div>
+        <div id="nav-elements">
+            <a class="nav-link" onclick="menuToggle()" href="index.html#exoskeletons-section">Exoskelette</a>
+            <a class="nav-link" onclick="menuToggle()" href="index.html#about-section">Über uns</a>
+            <a class="nav-link" onclick="menuToggle()" href="index.html#contact-section">Kontakt</a>
+        </div>
+        <div id="language-toggle">
+            <a href="#" class="active-language">de </a><span>|</span><a href="#">en</a>
+        </div>
+    </nav>
+    
+    <div id="hero-section">
+        <div id="hero-headlines">
+            <h1>EASE Exoskelette</h1>
+            <h3>weil Flexibilität unersetzlich ist</h3>
+        </div>
+        <a id="book-now-btn" class="big-central-btn" href="#contact-section">Demo buchen</a>        
+        <img id="scroll-indicator" src="./img/scroll-indicator.svg" alt="downward triangle indicating user to scroll">
+    </div>
+    
+    <section>
+        <div class="three-column-flex">
+            <div class="left-align-column span-2" data-aos="fade-up">
+                <h6>Arbeitsplätze gesünder und nachhaltiger gestalten</h6>
+                <h2>Für die Menschen, die hart arbeiten.</h2>
+                <p>Wir bei EASE verstehen die Herausforderungen körperlich fordernder Berufe. Mit unserer Technologie bieten wir echte Entlastung und schaffen gesunde Arbeitsbedingungen. Auf Augenhöhe mit denen, die wir unterstützen.</p>
+            </div>
+            <div>
+                <img src="./img/exoskeleton.webp" alt="an image of a worker wearing an exoskeleton" data-aos="zoom-in" data-aos-delay="400">
+            </div>
+        </div>
+    </section>
+    
+    <section id="exoskeletons-section">
+        <h2>Was macht Exoskelette so spannend?</h2>
+        <div class="three-column-flex">
+            <div class="icon-div" data-aos="fade-up">
+                <img src="./img/bed-solid.svg" alt="an icon of a person inside a bed">
+                <h4>Weniger Ausfälle</h4>
+                <p>Durch die gezielte Entlastung beanspruchter Muskelgruppen reduzieren sich krankheitsbedingte Ausfälle und Verletzungen - das spart Kosten und erhöht die Einsatzfähigkeit</p>
+            </div>
+            <div class="icon-div" data-aos="fade-up" data-aos-delay="250">
+                <img src="./img/arrow-up-right-dots-solid.svg" alt="an icon of an arrow pointing to the top right">
+                <h4>Höhere Produktivität</h4>
+                <p>Exoskelette erhalten die Ausdauer und Motivation über den gesamten Tag und ermöglichen ermüdungsfreies Arbeiten während der ganzen Schicht - für konstante Leistung und bessere KPIs</p>
+            </div>
+            <div class="icon-div" data-aos="fade-up" data-aos-delay="500">
+                <img src="./img/ease-icon.svg" alt="an icon of a person lifting a package">
+                <h4>Zukunftstechnologie</h4>
+                <p>Exoskelette sind Teil der modernen Arbeitswelt, da sie menschliche Fähigkeiten unterstützen, ohne die Mitarbeitenden zu ersetzen - für weniger Fluktuation und ein innovatives Image</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Was EASE auszeichnet</h2>
+        <div class="three-column-flex">
+            <div class="icon-div" data-aos="fade-up">
+                <img src="./img/feather-solid.svg" alt="an icon of a feather">
+                <h4>Leicht & Flexibel</h4>
+                <p>Unsere Exoskelette bieten mehr Bewegungsfreiheit und sind leichter als die der Konkurrenz</p>
+            </div>
+            <div class="icon-div" data-aos="fade-up" data-aos-delay="250">
+                <img src="./img/microchip-solid.svg" alt="an icon of a microchip">
+                <h4>AI Powered</h4>
+                <p>Dank hochentwickelter Sensoren und Algorithmen passt sich unser System in Echtzeit an die Bewegungen der Benutzer an</p>
+            </div>
+            <div class="icon-div" data-aos="fade-up" data-aos-delay="500">
+                <img src="./img/user-solid.svg" alt="an icon of a person">
+                <h4>Intuitiv</h4>
+                <p>Unsere Designs sind nicht nur funktional, sondern intuitiv. So sorgen sie nicht nur für Akzeptanz, sondern Begeisterung</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about-section">
+        <h2>Über uns</h2>
+        <h3>Das Team hinter EASE</h3>
+        
+        <div class="three-column-flex">
+            <div>
+                <img class="portrait-img" src="./img/christina.webp" alt="a portrait of christina">
+            </div>
+            <div class="left-align-column span-2" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                <h6>Die Lösungsarchitektin</h6>
+                <h4>Christina Harbauer</h4>
+                <p>Dr.-Ing. Menschzentrierte Exoskelettentwicklung</p>
+                <p>
+                    Expertin für Mensch-Maschine-Interaktion <br>
+                    Fokus Produktions-Ergonomie & Exoskelette <br>
+                    Hintergrund Mechatronik & Ergonomie-Forschung <br>
+                </p>
+            </div>
+        </div>
+        
+        <div class="three-column-flex reverse-columns">
+            <div>
+                <img class="portrait-img" src="./img/peter.webp" alt="a portrait of peter">
+            </div>
+            <div class="right-align-column span-2" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                <h6>Der Robotik-Evangelist</h6>
+                <h4>Peter Schaefer</h4>
+                <p>M.Sc Mechatronik und Robotik</p>
+                <p>
+                    Robotik-Spezialist mit Auszeichnung <br>
+                    Fokus Aktives, weiches Exoskelett <br>
+                    Erfahrung in Intentionserkennung & Steuerungstechnik <br>
+                </p>
+            </div>
+        </div>
+        
+        <div class="three-column-flex">
+            <div>
+                <img class="portrait-img" src="./img/noah.webp" alt="a portrait of noah">
+            </div>
+            <div class="left-align-column span-2" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                <h6>Der Chancenjäger</h6>
+                <h4>Noah Lars Gerullis</h4>
+                <p>M.Sc Mechatronik und Robotik</p>
+                <p>
+                    Ingenieur mit betriebswirtschaftlichem Fokus <br>
+                    Spezialist für textile Trägerstrukturen & Elektrik <br>
+                    Verantwortlich für Geschäftsmodell & technisches Design <br>
+                </p>
+            </div>
+        </div>
+        
+        <div class="three-column-flex reverse-columns">
+            <div>
+                <img class="portrait-img" src="./img/martin.webp" alt="a portrait of martin">
+            </div>
+            <div class="right-align-column span-2" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                <h6>Der Wachstumsstratege</h6>
+                <h4>Martin Fleischer</h4>
+                <p>Dr.-Ing. digitale Menschmodellierung</p>
+                <p>
+                    Experte für digitale Menschmodelle <br>
+                    Fokus Intentionserkennung für menschzentriertes Design <br>
+                    Verantwortlich für Strategie & Investor Relations <br>
+                </p>
+            </div>
+        </div>
+    </section>    
+    
+    
+    <div id="horizontal-scroll-container">
+        <h3 style="margin-bottom: 5rem;">Unsere Partner</h3>
+        <div class="horizontal-scrolling-div">
+            <div class="horizontal-scrolling-items"> <!-- must have the same div twice to work -->
+                <img src="./img/unternehmertum_logo.svg" alt="unternehmertum logo">
+                <img src="./img/xplore_logo.svg" alt="xplore logo">
+                <img src="./img/tum_logo.svg" alt="tum logo">
+                <img src="./img/exist_logo.svg" alt="exist logo">
+                <img src="./img/ptj-logo.svg" alt="ptj logo">
+                <img src="./img/bmwi_logo.svg" alt="bmwi logo">
+                <img src="./img/european_flag.svg" alt="european flag">
+            </div>
+            <div class="horizontal-scrolling-items"> <!-- must have the same div three times to work -->
+                <img src="./img/unternehmertum_logo.svg" alt="unternehmertum logo">
+                <img src="./img/xplore_logo.svg" alt="xplore logo">
+                <img src="./img/tum_logo.svg" alt="tum logo">
+                <img src="./img/exist_logo.svg" alt="exist logo">
+                <img src="./img/ptj-logo.svg" alt="ptj logo">
+                <img src="./img/bmwi_logo.svg" alt="bmwi logo">
+                <img src="./img/european_flag.svg" alt="european flag">
+            </div>
+            <div class="horizontal-scrolling-items"> <!-- must have the same div three times to work -->
+                <img src="./img/unternehmertum_logo.svg" alt="unternehmertum logo">
+                <img src="./img/xplore_logo.svg" alt="xplore logo">
+                <img src="./img/tum_logo.svg" alt="tum logo">
+                <img src="./img/exist_logo.svg" alt="exist logo">
+                <img src="./img/ptj-logo.svg" alt="ptj logo">
+                <img src="./img/bmwi_logo.svg" alt="bmwi logo">
+                <img src="./img/european_flag.svg" alt="european flag">
+            </div>
         </div>
     </div>
+    
+    <div id="timeline">
+        <h3 style="margin-bottom: 5rem;">Roadmap</h3>
+        <div class="milestones">
+            <div class="milestone" data-aos="zoom-out-down" data-aos-anchor-placement="top-center">
+                <img class="marker"  src="./img/scroll-indicator.svg" alt="a triangle marker">
+                <div class="content">
+                    <h3>12 | 2019</h3>
+                    <h4>Eine preisgekrönte Idee</h4>
+                    <p>Gewinn des Bioinspired Ideas Award für das Konzept eines weichen, menschenorientierten Exoskeletts.</p>
+                </div>
+            </div>
 
+            
+            <div class="milestone" data-aos="zoom-out-down" data-aos-anchor-placement="top-center">
+                <img class="marker"  src="./img/scroll-indicator.svg" alt="a triangle marker">
+                <div class="content">
+                    <h3>12 | 2021</h3>
+                    <h4>Der Entschluss zur Gründung</h4>
+                    <p>Beschluss zur Gründung des Startups und Aufnahme in den xplore Venture Builder.</p>
+                </div>
+            </div>
+
+            
+            <div class="milestone" data-aos="zoom-out-down" data-aos-anchor-placement="top-center">
+                <img class="marker"  src="./img/scroll-indicator.svg" alt="a triangle marker">
+                <div class="content">
+                    <h3>11 | 2022</h3>
+                    <h4>Die ersten Partnerschaften</h4>
+                    <p>Erhalt der ersten Letters of Intent (LoIs) für den EXIST-Antrag.</p>
+                </div>
+            </div>
+
+            <div class="milestone" data-aos="zoom-out-down" data-aos-anchor-placement="top-center">
+                <img class="marker"  src="./img/scroll-indicator.svg" alt="a triangle marker">
+                <div class="content">
+                    <h3>06 | 2023</h3>
+                    <h4>Der Förderzuschlag</h4>
+                    <p>Bewilligung der EXIST Forschungstransfer-Förderung.</p>
+                </div>
+            </div>
+
+            <div class="milestone" data-aos="zoom-out-down" data-aos-anchor-placement="top-center">
+                <img class="marker"  src="./img/scroll-indicator.svg" alt="a triangle marker">
+                <div class="content">
+                    <h3>02 | 2024</h3>
+                    <h4>Der Start der Förderung</h4>
+                    <p>Start der EXIST Forschungstransfer-Förderphase.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <section id="contact-section">
+        <div class="three-column-flex">
+            <div class="span-2">
+                <img src="./img/contact.webp" alt="" data-aos="zoom-in" data-aos-anchor-placement="top-center">
+            </div>
+            <div class="left-align-column" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                <h2>Kontakt</h2>
+                <p>Wir setzen auf langfristige Partnerschaften mit Unternehmen, die ihre Mitarbeiter wertschätzen und deren Gesundheit fördern wollen. Kontaktiert uns, um mehr darüber zu erfahren, wie EASE Exoskelette eure Arbeitsplätze sicherer und produktiver machen können.</p>
+                <form action="https://submit-form.com/ItmtSX2Jy">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required="" />
+                    <label for="email">Mail</label>                    
+                    <input type="email" id="email" name="email" placeholder="Mail" required="" />
+                    <label for="message">Nachricht</label>
+                    <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Nachricht"
+                    required=""
+                    ></textarea>
+                    <button type="submit">Send</button>
+                </form>              
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div>
+            <img id="footer-pattern" src="./img/pattern-green.svg" alt="a pattern of triangles">
+        </div>
+        <div>
+            <a href="/"><img id="ease-icon" src="./img/favicon.svg" alt="ease logo"></a>
+        </div>        
+        <div>
+            <div id="footer-links">
+                <a href="#exoskeletons-section">Exoskelette</a>
+                <a href="#about-section">Über uns</a>
+                <a href="#contact-section">Kontakt</a>
+            </div>
+            <div id="copyright">
+                <span>&#169; 2024 Easy by the HF.Exo project <br> <a href="imprint.html">Impressum</a> | <a href="privacy.html">Datenschutz</a></span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
