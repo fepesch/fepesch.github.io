@@ -110,6 +110,11 @@ section {
     text-align: left !important;
 }
 
+#contact-section {
+    max-height: 80vh;
+    min-height: 80vh;
+}
+
 nav {
     position: fixed;
     top: 1rem;
@@ -123,7 +128,7 @@ nav {
     justify-content: space-between;
     align-items: center;    
     border-radius: 3rem;
-    transition:all 1s;
+    transition:all 0.5s;
     z-index: 100;
 }
 

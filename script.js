@@ -41,7 +41,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     navbar.style.top = "1rem"; // Transition back to top smoothly
   } else {
-    navbar.style.top = "-100px"; // Hide initially, animate on scroll down
+    navbar.style.top = "1rem"; // Hide initially, animate on scroll down
   }
 
   prevScrollpos = currentScrollPos;
