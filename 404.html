@@ -1,61 +1,68 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tschoks Performance - Leistungsoptimierung durch Gesundheitsförderung auf höchstem Niveau</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <!--favicons-->
-    <link rel="icon" href="img/tschoks_logo.svg">
-    <link rel=”mask-icon” href=img/tschoks_logo.svg” color="#000000"> <!--For Safari, it’s a bit different. You need to add a mask-icon. It’s also an SVG, but it has to be made of a single colour and placed on a transparent background. The browser adds the colour of the attribute.-->
-    <link rel="apple-touch-icon" href="img/tschoks_logo_apple_touch_icon.png"> <!--The icon for iOS devices as well as favourites from browsers new tab page and more. You only need the 180 x 180 size, and the sizes attribute is superfluous.-->
-    <!--The manifest.json provides information about your web app or website. These lines are mandatory to pass Lighthouse’s test. The icon linked is used by Android and Chrome. The largest size 512 x 512 is the only one needed.-->
-    <link rel="manifest" href="manifest.json">
-    
-</head>
-<body>
-    <nav id="navbar" class="scrolled">
+<html lang="de"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+        <title>EASE Exoskelette | 404</title>
+
+        <!--carousel-->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        
+        <!--animate on scroll-->
+        <!--readme via https://github.com/michalsnik/aos/tree/v2-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+        <!--favicon-->
+        <link rel="icon" href="./img/favicon.svg">
+    </head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" >
+    <nav id="navbar" class="">
         <div id="first-nav-row">
-            <a id="logo" href="index.html"><img src="img/tschoks_logo.svg" alt="tschoks logo"><span>Tschoks Performance</span></a>
+            <a href="https://ease-systems.de"><img id="ease-logo" src="./img/ease-logo-green.svg" alt="EASE logo"></a>
             <a href="javascript:void(0);" id="menu-toggle" class="icon" onclick="menuToggle()"></a>
         </div>
         <div id="nav-elements">
-            <a class="nav-link" onclick="menuToggle()" href="index.html#offers-section">Unsere Angebote</a>
-            <a class="nav-link" onclick="menuToggle()" href="index.html#about-section">Über uns</a>
-            <a class="nav-link" onclick="menuToggle()" href="#contact-section">Kontakt</a>
+            <a class="nav-link" onclick="menuToggle()" href="https://ease-systems.de#exoskeletons-section">Exoskelette</a>
+            <a class="nav-link" onclick="menuToggle()" href="https://ease-systems.de#about-section">Über uns</a>
+            <a class="nav-link" onclick="menuToggle()" href="https://ease-systems.de#contact-section">Kontakt</a>
+        </div>
+        <div id="language-toggle">
+            <a href="https://ease-systems.de/" class="active-language">de </a><span>|</span><a href="https://ease-systems.de/english.html">en</a>
         </div>
     </nav>
     
-    <div class="half-width only-section">
+    <section>
 
-        <h1 style="font-size: 10rem; margin-bottom:2rem">404</h1>
-        <p style="margin-bottom:20rem;"> Whoops, diese Seite existiert leider nicht</p>
-        <a class="big-central-btn">Zurück zur Website</a>
+        <h1>Huups</h1>
 
-    </div>
+        <h4>diese Seite existiert leider nicht</h4>
+
+        <a class="big-central-btn" href="https://ease-systems.de">Bring mich in Sicherheit</a>
+    </section>
     
-    <footer class="full-width">
+    <footer>
         <div>
-            <a id="logo" href="/"><img src="img/tschoks_logo.svg" alt="tschoks logo"><span>Tschoks Performance</span></a>
-            <p>&#169; 2024 Tschoks Performance</p>
+            <img id="footer-pattern" src="./img/pattern-green.svg" alt="a pattern of triangles">
         </div>
-        
         <div>
-            follow us on social media
-            <div id="social-links">
-                <a href="https://api.whatsapp.com/send/?phone=491745647732&text&type=phone_number&app_absent=0"><img src="img/whatsapp.svg" alt="whatsapp"></a>
-                <a href="https://www.instagram.com/tschoksperformance/"><img src="img/instagram.svg" alt="instagram"></a>
-                <a href="https://www.tiktok.com/@tschoksperformance"><img src="img/tiktok.svg" alt="tiktok"></a>
+            <a href="https://ease-systems.de/"><img id="ease-icon" src="./img/favicon.svg" alt="ease logo"></a>
+        </div>        
+        <div>
+            <div id="footer-links">
+                <a href="https://ease-systems.de#exoskeletons-section">Exoskelette</a>
+                <a href="https://ease-systems.de#about-section">Über uns</a>
+                <a href="https://ease-systems.de#contact-section">Kontakt</a>
             </div>
-        </div>
-        
-        <div id="footer-links">
-            <a href="imprint.html">Impressum</a>
-            <a href="privacy.html">Datenschutz</a>
+            <div id="copyright">
+                <span>© 2024 EASE by the HF.Exo project <br> <a href="https://ease-systems.de/imprint.html">Impressum</a> | <a href="https://ease-systems.de/privacy.html">Datenschutz</a></span>
+            </div>
         </div>
     </footer>
     
-</body>
-</html>
+
+</body></html>
