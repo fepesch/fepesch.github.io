@@ -586,9 +586,9 @@ footer > div:last-child {
         height: 3rem;
     }
     
-    #timeline {    
+    /* #timeline {    
         width: calc(100% - 4rem);
-    }
+    } */
     
     .milestones::before {
         left: 0;
