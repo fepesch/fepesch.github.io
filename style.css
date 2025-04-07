@@ -116,6 +116,21 @@ section {
     min-height: 80vh;
 } */
 
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 800px; /* or whatever fits your design */
+    height: auto;
+    display: block;
+    border-radius: 8px; /* optional: for nicer edges */
+}
+
 nav {
     position: fixed;
     top: 1rem;
