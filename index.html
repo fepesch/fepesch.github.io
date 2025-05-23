@@ -24,7 +24,12 @@
     <nav id="navbar">
         <div id="first-nav-row">
             <a href="index.html"><img id="ease-logo" src="./img/ease-logo-green.svg" alt="ease logo"></a>
-            <a href="javascript:void(0);" id="menu-toggle" class="icon" onclick="menuToggle()"></a>
+            <div id="mobile-buttons">
+                <div id="language-toggle">
+                    <a href="#" class="active-language">de </a><span>|</span><a href="english.html">en</a>
+                </div>
+                <a href="javascript:void(0);" id="menu-toggle" class="icon" onclick="menuToggle()"></a>
+            </div>
         </div>
         <div id="nav-elements">
             <a class="nav-link" onclick="menuToggle()" href="index.html#exoskeletons-section">Exoskelette</a>
@@ -33,8 +38,10 @@
             <a class="nav-link" onclick="menuToggle()" href="index.html#about-section">Über uns</a>
             <a class="nav-link" onclick="menuToggle()" href="index.html#contact-section">Kontakt</a>
         </div>
-        <div id="language-toggle">
-            <a href="#" class="active-language">de </a><span>|</span><a href="english.html">en</a>
+        <div id="desktop-buttons">
+            <div id="language-toggle">
+                        <a href="#" class="active-language">de </a><span>|</span><a href="english.html">en</a>
+            </div>
         </div>
     </nav>
     

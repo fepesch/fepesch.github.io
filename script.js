@@ -2,6 +2,8 @@
 var navbar = document.querySelector("#navbar");
 var easeLogo = document.querySelector("#ease-logo");
 var scrollIndicator = document.querySelector("#scroll-indicator");
+var menuToggleIcon = document.getElementById("menu-toggle");
+
 
 // Check if it's a desktop browser (adjust detection logic as needed)
 const isDesktop = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -12,6 +14,7 @@ window.onload = function() {
     navbar.classList.add("scrolled");
     easeLogo.src = "./img/ease-logo-white.svg";
   }
+  setMenuIcon();
 }; 
 
 /* toggle the navbar background when window is scrolled */
@@ -45,12 +48,14 @@ window.onscroll = function() {
   }
 
   prevScrollpos = currentScrollPos;
+  setMenuIcon();
 };
 
 /* Toggle the mobile menu */
 function menuToggle() {
   document.querySelector("#menu-toggle").classList.toggle("open");
   document.querySelector("#nav-elements").classList.toggle("toggled");
+  setMenuIcon();
   /*var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
   x.className += " responsive";
@@ -69,3 +74,20 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var x = 'hello';
 });*/
+
+function setMenuIcon() {
+  const isMobile = window.innerWidth <= 860;
+  if (!isMobile || !menuToggleIcon) return;
+
+  const open = menuToggleIcon.classList.contains("open");
+  const scrolled = window.scrollY > 5;
+
+  let icon = "";
+  if (open) {
+    icon = scrolled ? "xmark.svg" : "xmark_dark.svg";
+  } else {
+    icon = scrolled ? "bars.svg" : "bars_dark.svg";
+  }
+
+  menuToggleIcon.style.backgroundImage = `url('./img/${icon}')`;
+}
