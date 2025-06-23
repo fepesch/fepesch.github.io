@@ -477,6 +477,26 @@ form > button {
     padding: 1rem;
 }
 
+.button {
+    display: block;
+    text-align: center !important;
+    flex-direction: column;
+    background-color: var(--main);
+    color: var(--ivory);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    color: var(--highlight);
+    font-weight: 600;
+    letter-spacing: .1rem;
+    transition: all 200ms;
+    margin: 0 .75rem;
+}
 
 /* footer */
 footer {
